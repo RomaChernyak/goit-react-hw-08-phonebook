@@ -53,7 +53,3 @@ export const Button = styled.button`
     background-color: lightgray;
   }
 `;
-
-export const Text = styled.h2`
-  margin: 0 0 10px 0;
-`;

@@ -46,7 +46,6 @@ export const UserMenu = () => {
         >
           Logout
         </Button>
-        
       </Wrapper>
     </ThemeProvider>
   );

@@ -6,7 +6,6 @@ import { deleteContact } from "redux/operations";
 import { useState } from "react";
 import Modal from "components/Modal/Modal";
 import EditForm from "components/EditForm/EditForm";
-import { Notify } from "notiflix";
 
 export const ContactListItem = ({ renderListItem: { id, name, number } }) => {
   const [showModal, setShowModal] = useState(false);
@@ -25,14 +24,6 @@ export const ContactListItem = ({ renderListItem: { id, name, number } }) => {
   
   const dispatch = useDispatch();
 
-  const handleDeletContact = ()=>{
-    dispatch(deleteContact(id));
-    Notify.success(`Contact   "${name}"  deleted`, Notify.init({
-        clickToClose: true,
-        position: 'center-top',
-        }));
-  }
-
   return ( 
 
     <ContactItem key={id}>
@@ -44,7 +35,7 @@ export const ContactListItem = ({ renderListItem: { id, name, number } }) => {
         <Button type="button" style={{width:'36px'}} onClick={openModal}>
         Edit
       </Button>
-        <Button type="button" onClick={handleDeletContact}>
+      <Button type="button" onClick={() => dispatch(deleteContact(id))}>
         Delete
       </Button>
       </div>

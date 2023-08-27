@@ -90,7 +90,7 @@ export const RegisterForm = () => {
               autoComplete="new-password"
               sx={{ mt: 3, mb: 3 }}
             />
-            {isAuthError && <div> Error occured while Sign Up </div>}
+            {isAuthError && <div>Error occured while Sign Up </div>}
             <Button
               type="submit"
               fullWidth

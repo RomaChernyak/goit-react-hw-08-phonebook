@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 // import { Helmet } from 'react-helmet';
 import { ContactList } from 'components/ContactList/ContactList';
@@ -18,26 +18,11 @@ import { RotatingLines } from 'react-loader-spinner';
 // import { useNavigate } from 'react-router-dom';
 
 import { Helmet } from 'react-helmet-async';
-import { Button } from 'components/ContactForm/ContactForm.styled';
-import Modal from 'components/Modal/Modal';
 
 
 
 
 export default function ContactsPage() {
-  const [showModal, setShowModal] = useState(false);
-
-  const closeModal = () => {
-    if (showModal) {
-      setShowModal(false);
-    };
-  };
-
-  const openModal = () => {
-    if (!showModal) {
-      setShowModal(true);
-    };
-  };
   
   const dispatch = useDispatch();
   // const navigate = useNavigate();
@@ -61,10 +46,10 @@ export default function ContactsPage() {
       <Helmet>
         <title>Contacts</title>
       </Helmet>
-      {/* <Box> */}
-        {/* <Text>Phonebook</Text> */}
-        {/* <ContactForm /> */}
-      {/* </Box> */}
+      <Box>
+        <Text>Phonebook</Text>
+        <ContactForm />
+      </Box>
 
       <Box>
         {error && <p>{error}</p>}
@@ -78,23 +63,9 @@ export default function ContactsPage() {
           />
         ) : (
           <>
-              <div style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                
-              }}>
-                <Text>Contacts</Text>
-                <Button type="button"  onClick={openModal}>Add contact</Button>
-              </div>
+            <Text>Contacts</Text>
             <Filter />
-              <ContactList />
-              {showModal &&
-        <Modal onClose={closeModal}>
-          <ContactForm
-            onClose={closeModal}
-          />
-        </Modal>}
+            <ContactList />
           </>
         )}
       </Box>

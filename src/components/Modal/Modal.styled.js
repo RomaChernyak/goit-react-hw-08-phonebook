@@ -9,7 +9,7 @@ export const ModalOverlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 1200;
 `;
 export const Box = styled.div`
@@ -22,8 +22,7 @@ export const Box = styled.div`
     rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
     rgba(11, 127, 171, 0.5) 0px 0px 25px 5px;
 
-  margin: 0 auto;
-  /* margin: 30px auto; */
+  margin: 30px auto;
   // margin: 40px;
   // max-width: fit-content;
 `;
