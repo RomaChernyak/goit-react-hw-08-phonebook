@@ -11,8 +11,6 @@ export const Box = styled.div`
     rgba(11, 127, 171, 0.5) 0px 0px 25px 5px;
 
   margin: 30px auto;
-  // margin: 40px;
-  // max-width: fit-content;
 `;
 
 export const Text = styled.h1`
