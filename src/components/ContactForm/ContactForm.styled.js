@@ -42,7 +42,6 @@ export const Button = styled.button`
     cursor: pointer;
     border-color: green;
     color: green;
-    // background-color: lightgreen;
   }
 
   &:disabled {

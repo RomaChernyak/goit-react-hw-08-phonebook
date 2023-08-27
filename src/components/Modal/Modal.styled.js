@@ -12,6 +12,7 @@ export const ModalOverlay = styled.div`
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1200;
 `;
+
 export const Box = styled.div`
   padding: 30px 40px;
   width: 440px;

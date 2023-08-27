@@ -14,7 +14,6 @@ const EditForm = ({ onClose, id, name, number }) => {
   const initialName = name;
   const initialNumber = number;
   
-    
   const [editName, setEditName] = useState(name);
   const [editNumber, setEditNumber] = useState(number);
 
